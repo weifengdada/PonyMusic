@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ponymusic.DetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#f00"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_fanhui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/fanhui"/>
+         <TextView
+             android:padding="10dp"
+             android:layout_marginLeft="100dp"
+             android:id="@+id/list_name"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="#fff"
+             android:textSize="20dp"
+             android:text="欧美金曲榜"/>
+
+
+    </RelativeLayout>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/list_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

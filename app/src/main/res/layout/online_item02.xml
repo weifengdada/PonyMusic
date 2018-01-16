@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+   <com.facebook.drawee.view.SimpleDraweeView
+       android:id="@+id/parent_image"
+       android:layout_width="100dp"
+       android:layout_height="100dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        >
+        <TextView
+            android:id="@+id/firstSong"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="半壶纱-刘珂矣"/>
+        <TextView
+            android:id="@+id/secondSong"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="你还要我怎样-薛之谦"/>
+        <TextView
+            android:id="@+id/thirdSong"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="红颜旧-崔子格"/>
+
+    </LinearLayout>
+
+</LinearLayout>

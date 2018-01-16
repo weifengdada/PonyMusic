@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context="com.example.ponymusic.HomeActivity">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="vertical"
+       android:layout_height="match_parent">
+      <RelativeLayout
+          android:background="#f00"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <ImageView
+              android:id="@+id/btn_menu"
+              android:layout_alignParentLeft="true"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@drawable/ic_menu"/>
+          <RadioGroup
+              android:id="@+id/radio_group"
+              android:layout_width="wrap_content"
+              android:layout_centerInParent="true"
+              android:orientation="horizontal"
+              android:layout_height="wrap_content">
+
+              <RadioButton
+                  android:id="@+id/radio_minesong"
+                  android:button="@null"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="#fff"
+                  android:textSize="20dp"
+                  android:padding="10dp"
+                  android:text="我的音乐"
+                  />
+              <RadioButton
+                  android:id="@+id/radio_online"
+                  android:button="@null"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="在线音乐"
+                  android:padding="10dp"
+                  android:textSize="20dp"
+
+                  android:textColor="#fff"
+
+                  />
+
+          </RadioGroup>
+          <ImageView
+              android:id="@+id/btn_search"
+              android:layout_alignParentRight="true"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@drawable/ic_menu_search"/>
+      </RelativeLayout>
+
+       <android.support.v4.view.ViewPager
+           android:id="@+id/content_viewpager"
+           android:layout_width="match_parent"
+           android:layout_weight="1"
+           android:layout_height="0dp">
+
+       </android.support.v4.view.ViewPager>
+
+       <RelativeLayout
+           android:id="@+id/goPlay"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="bottom">
+
+           <ImageView
+               android:id="@+id/song_pic"
+               android:layout_width="40dp"
+               android:layout_height="40dp"
+               android:src="@mipmap/default_cover" />
+
+           <LinearLayout
+               android:id="@+id/song_detail"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_toRightOf="@+id/song_pic"
+               android:orientation="vertical">
+
+               <TextView
+                   android:id="@+id/song_name"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="阿婆说" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="陈一发" />`
+           </LinearLayout>
+
+           <CheckBox
+               android:layout_marginLeft="200dp"
+               android:id="@+id/play_check"
+               android:layout_toRightOf="@+id/song_detail"
+               android:button="@null"
+               android:layout_width="40dp"
+               android:layout_height="40dp"
+               android:background="@drawable/play"
+               />
+
+           <ImageView
+               android:id="@+id/next_song"
+               android:layout_width="40dp"
+               android:layout_height="40dp"
+               android:layout_alignParentRight="true"
+               android:src="@mipmap/ic_play_bar_btn_next" />
+       </RelativeLayout>
+
+   </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        ></android.support.v7.widget.RecyclerView>
+
+
+</android.support.v4.widget.DrawerLayout>
